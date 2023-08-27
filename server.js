@@ -9,18 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
-
-// app.use(cors(
-//   {
-//   origin: process.env.CORS_ORIGIN
-//   } ))
-  
-// const allowedOrigins = ['https://latesthoneymoons.com'];
-// app.use(cors({
-//   origin: allowedOrigins,
-// }));
-
- app.use(cors());
+app.use(cors());
 app.use(express.json());
 app.use(logger('dev'))
 // Connect to MongoDB
