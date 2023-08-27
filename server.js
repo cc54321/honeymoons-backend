@@ -9,10 +9,16 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
-const allowedOrigins = ['https://latesthoneymoons.com'];
-app.use(cors({
-  origin: allowedOrigins,
-}));
+
+app.use(cors(
+  {
+  origin: process.env.CORS_ORIGIN
+  } ))
+  
+// const allowedOrigins = ['https://latesthoneymoons.com'];
+// app.use(cors({
+//   origin: allowedOrigins,
+// }));
 
 // app.use(cors());
 app.use(express.json());
